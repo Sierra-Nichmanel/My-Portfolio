@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book a Strategy Session | Sierra</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e31c29",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl">diamond</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-black tracking-tighter uppercase leading-none text-white">Sierra</span>
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Michael Ibangha</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Case Studies</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Testimonials</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 rounded-lg bg-white/5 border border-white/10 text-sm font-semibold hover:bg-white/10 transition-all">
+                    Sign In
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-4 py-12 md:py-20">
+<!-- Hero Header -->
+<div class="max-w-4xl w-full text-center mb-12">
+<h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4 text-white leading-[1.1]">
+                Book a Strategy <span class="text-primary italic">Session</span> with Sierra
+            </h1>
+<p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light">
+                High-performance solutions for elite brands. Let's engineer your next digital breakthrough.
+            </p>
+</div>
+<!-- Main Booking Interface -->
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm shadow-2xl">
+<!-- Left Panel: Context & Details -->
+<div class="lg:col-span-4 p-8 border-b lg:border-b-0 lg:border-r border-white/10 bg-gradient-to-br from-white/[0.02] to-transparent">
+<div class="flex flex-col h-full">
+<div class="mb-8">
+<div class="w-20 h-20 rounded-2xl overflow-hidden mb-4 border-2 border-primary/30">
+<img alt="Michael Ibangha" class="w-full h-full object-cover" data-alt="Professional portrait of a high-performance business consultant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMg7fRkBbZcpSQ8Dy3B1li4hEizNf3vEVSPL_CDF7mgs1Hwpy6jmBr4-npGJsl02sjLyOgzmZXnp_gahDjBYNGmiot378uGpe-98ZOrJCBmVMOoSh5aUCpx_cMiOK4msH5wZts3XHY63uuVCx8d5oCRt7CPCAtiT5Bv6E_hRPXHJwM7fAIlfVYmMEhY_rsTl-YsNP-Cxaj2KbQtSrHArZAuVm18NtBT37dyNLZHrQgflTTx7LOdBn0SqrLxP9betO7mri07j9-Bzwd"/>
+</div>
+<h3 class="text-xl font-bold text-white mb-1">Michael Ibangha</h3>
+<p class="text-primary text-sm font-bold uppercase tracking-widest mb-4">Lead Strategist</p>
+<div class="flex items-center gap-2 text-slate-400 text-sm mb-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>45-60 Minute Strategy Call</span>
+</div>
+<div class="flex items-center gap-2 text-slate-400 text-sm">
+<span class="material-symbols-outlined text-sm">videocam</span>
+<span>Google Meet / Zoom</span>
+</div>
+</div>
+<div class="space-y-6 mt-auto">
+<div class="p-4 rounded-xl bg-primary/10 border border-primary/20">
+<p class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Agenda Includes:</p>
+<ul class="text-sm space-y-2 text-slate-300">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xs mt-1">check_circle</span>
+                                    Technical feasibility audit
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xs mt-1">check_circle</span>
+                                    Design ecosystem analysis
+                                </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-xs mt-1">check_circle</span>
+                                    Roadmap &amp; Timeline projection
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Middle Panel: Calendar & Selection -->
+<div class="lg:col-span-5 p-8 border-b lg:border-b-0 lg:border-r border-white/10">
+<!-- Service Selection -->
+<div class="mb-8">
+<label class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">Select Service</label>
+<div class="relative group">
+<select class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white appearance-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none">
+<option class="bg-[#1a1a1a]">Web Development &amp; Architecture</option>
+<option class="bg-[#1a1a1a]">UI/UX Product Design</option>
+<option class="bg-[#1a1a1a]">Elite Brand Identity</option>
+<option class="bg-[#1a1a1a]">General Strategy Consultation</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none group-focus-within:text-primary">expand_more</span>
+</div>
+</div>
+<!-- Calendar Component -->
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-lg font-bold text-white">November 2024</h4>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 mb-2">
+<div class="text-center text-[10px] font-bold text-slate-500 uppercase">Sun</div>
+<div class="text-center text-[10px] font-bold text-slate-500 uppercase">Mon</div>
+<div class="text-center text-[10px] font-bold text-slate-500 uppercase">Tue</div>
+<div class="text-center text-[10px] font-bold text-slate-500 uppercase">Wed</div>
+<div class="text-center text-[10px] font-bold text-slate-500 uppercase">Thu</div>
+<div class="text-center text-[10px] font-bold text-slate-500 uppercase">Fri</div>
+<div class="text-center text-[10px] font-bold text-slate-500 uppercase">Sat</div>
+</div>
+<div class="grid grid-cols-7 gap-2">
+<!-- Example Calendar Grid -->
+<div class="h-10 flex items-center justify-center text-slate-700 text-sm">27</div>
+<div class="h-10 flex items-center justify-center text-slate-700 text-sm">28</div>
+<div class="h-10 flex items-center justify-center text-slate-700 text-sm">29</div>
+<div class="h-10 flex items-center justify-center text-slate-700 text-sm">30</div>
+<div class="h-10 flex items-center justify-center text-slate-700 text-sm">31</div>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">1</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">2</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">3</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">4</button>
+<button class="h-10 rounded-lg bg-primary/20 border border-primary/50 text-white flex items-center justify-center text-sm font-bold shadow-lg shadow-primary/20">5</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">6</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">7</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">8</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">9</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">10</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">11</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">12</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">13</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">14</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">15</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">16</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">17</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">18</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">19</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">20</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">21</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">22</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">23</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">24</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">25</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">26</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">27</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">28</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">29</button>
+<button class="h-10 rounded-lg hover:bg-white/5 flex items-center justify-center text-sm font-medium transition-colors">30</button>
+</div>
+</div>
+</div>
+<!-- Right Panel: Time & Form -->
+<div class="lg:col-span-3 p-8 flex flex-col">
+<div class="mb-8">
+<label class="block text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">Available Times</label>
+<div class="grid grid-cols-1 gap-2 overflow-y-auto max-h-[300px] pr-2 custom-scrollbar">
+<button class="w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all text-sm font-medium text-white group flex justify-between items-center">
+                            09:00 AM
+                            <span class="opacity-0 group-hover:opacity-100 material-symbols-outlined text-primary text-xs">arrow_forward_ios</span>
+</button>
+<button class="w-full py-3 px-4 rounded-xl bg-primary border border-primary text-white text-sm font-bold flex justify-between items-center shadow-lg shadow-primary/20">
+                            10:30 AM
+                            <span class="material-symbols-outlined text-white text-xs">check</span>
+</button>
+<button class="w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all text-sm font-medium text-white group flex justify-between items-center">
+                            01:00 PM
+                            <span class="opacity-0 group-hover:opacity-100 material-symbols-outlined text-primary text-xs">arrow_forward_ios</span>
+</button>
+<button class="w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all text-sm font-medium text-white group flex justify-between items-center">
+                            02:30 PM
+                            <span class="opacity-0 group-hover:opacity-100 material-symbols-outlined text-primary text-xs">arrow_forward_ios</span>
+</button>
+<button class="w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all text-sm font-medium text-white group flex justify-between items-center">
+                            04:00 PM
+                            <span class="opacity-0 group-hover:opacity-100 material-symbols-outlined text-primary text-xs">arrow_forward_ios</span>
+</button>
+<button class="w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all text-sm font-medium text-white group flex justify-between items-center opacity-50 cursor-not-allowed">
+                            05:30 PM
+                        </button>
+</div>
+</div>
+<div class="mt-auto">
+<div class="p-4 rounded-xl bg-white/5 border border-white/10 mb-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-slate-400 font-medium">Selected Slot</span>
+<span class="text-xs text-primary font-bold">Nov 5, 10:30 AM</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs text-slate-400 font-medium">Platform</span>
+<span class="text-xs text-white font-medium">Google Meet</span>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl bg-primary text-white font-black tracking-widest uppercase text-sm hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-primary/25">
+                        Confirm Session
+                    </button>
+</div>
+</div>
+</div>
+<!-- Contact Form (Appears after confirmation or as alternate step) -->
+<div class="max-w-4xl w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-4">
+<label class="block">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2 block">Full Name</span>
+<input class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="John Doe" type="text"/>
+</label>
+<label class="block">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2 block">Business Email</span>
+<input class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="john@company.com" type="email"/>
+</label>
+</div>
+<label class="block h-full">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2 block">Project Brief (Optional)</span>
+<textarea class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all h-[calc(100%-2rem)] resize-none" placeholder="Tell us briefly about your high-performance goals..."></textarea>
+</label>
+</div>
+<!-- Trust Badges -->
+<div class="mt-20 opacity-50 hover:opacity-100 transition-opacity">
+<p class="text-center text-[10px] uppercase tracking-[0.3em] font-bold text-slate-500 mb-6">Trusted by disruptors globally</p>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 items-center grayscale invert">
+<img alt="Slack" class="h-6" data-alt="Corporate logo of Slack" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs5Nx0AnDSljEmfD5dg-c9PPvwtb_t1jvMSJjsz3rDODe1p0YYgGgP2PSUjrMQts5ZC7AxVjlI90UmycDIuK1uLY5Stf7n7n2kbuYz32R-YNMirwwvqnMl0iS2rN2L1_k3XM6zwCZvBINLdnNe99UZSKZgBzIoXB_L-KqJxBODU59KL5ZyazLNKKzNq76Pk0hNGV_Lg3cfXOMxsRFcukqn3JlsM_x589uyRXR5AaecizeGEpWr6bvVue-uGwZVt62QRcIoKJ-zH-5D"/>
+<img alt="Amazon" class="h-6" data-alt="Corporate logo of Amazon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDA8uVbfvEP45rblHLBjxRCXqNQCvVTNV1JIPOcuXUtd3VnmBCGqlLvNKktYwaMQOZPi2-05Fl5dFDxMYs3CJfavyN4rirIKUwUT5qChNDDhyYEfInNpOT8WzrXLdoXGOjc3KiJR2TnJ7aoXlzzE-Rnf9pVpUP4Ni7KC0uqe4V_pkpiEpcTakWaaEQicCE00YnFPPU_mN73jOFZ8NcYc-2GkwJAGyzMfxXjwwH4ZRwHLdi1FrWp_sSuQPh5AQfgufeNv0sgyuKvDk_"/>
+<img alt="Netflix" class="h-6" data-alt="Corporate logo of Netflix" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz-rmLz09-Z2XBOtfIrfzveEToWPaBu2DanrOTIr-N5i9sagBtH2GfZzceaYnCo5tCn9o3xu063uDVAF5Z0ddhePtKcC9PqL097-YgAtt-X3-NpPuYHjLxmEGWcslBRmftQn5xO6ID1QdFa1o2XVm6krGan2kq_j5XJcaNtuGWGdUGHdAvvQ7N-Z4LD3E2RPeArdWpNdi4MKf90T2z9WC_LHxMtc1LMv5gnm4uiePENzzgZ0GoFY8Ff5NftyoMCO9Xo7TV9mHQFF-D"/>
+<img alt="Google" class="h-6" data-alt="Corporate logo of Google" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-7PED05JYFykgmXl4MLXQTT0iBJuzQdwX-wwHwHzX7FQ2SsogTvmoQVcJCNpd_8Tkupa-HDbIHcK1zp5Aq8BCFsI7h2IvwOqRlneuHRp2LoIMixFKVe7lZ4VdSZF0VqNCnKc17xeWZKrdv3KQd5iS6Z3HJNA_rkgOqvHPrOnb-bqGVNxXd6IXXX2g7EaE7rCaqKCvJP_dxkUOIyBkZBQjLodaYSSVMfYNl__DCmzwV1EOpNx1TlNkHJiUuRIb7cnuFUbKHf7ZTnP8"/>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/10 bg-background-dark py-12 px-6 mt-auto">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<div class="flex items-center gap-3 mb-4">
+<div class="size-8 bg-primary/20 flex items-center justify-center rounded-lg">
+<span class="material-symbols-outlined text-primary text-xl">diamond</span>
+</div>
+<span class="text-lg font-black tracking-tighter uppercase text-white">Sierra</span>
+</div>
+<p class="text-slate-500 text-sm max-w-xs text-center md:text-left">
+                    Engineering high-performance digital ecosystems for the world's most ambitious brands.
+                </p>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+</div>
+<div class="text-slate-500 text-xs text-center md:text-right">
+<p>© 2024 Sierra by Michael Ibangha.</p>
+<p class="mt-1">All Rights Reserved. <a class="underline hover:text-white" href="#">Privacy Policy</a></p>
+</div>
+</div>
+</footer>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(227, 28, 41, 0.5);
+        }
+    </style>
+</body></html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sierra | Premium Digital Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e31c29",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0a0a0a", // Deep charcoal for premium feel
+                        "surface-dark": "#1a1a1a",
+                        "border-dark": "#2a2a2a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        .project-card:hover .view-button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-white/5 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined !text-2xl">diamond</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter uppercase italic">Sierra</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Work</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex h-11 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-white transition-all hover:bg-primary/90 active:scale-95">
+                        Let's Talk
+                    </button>
+<div class="h-10 w-10 overflow-hidden rounded-full border-2 border-primary/20 bg-surface-dark shadow-lg">
+<img alt="Profile" class="h-full w-full object-cover" data-alt="Professional portrait of a male designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBImDqUF6UyeegHARfBhP0ABazXgESH0zi9KG6ACsx5FIxZ9YoteHj0-8v90lT-Kv6VwBj3mMztvxYlDDHICUdqzGf-uC1QAtV-Aw5FZnD-oA-GmCP-Vphzpr9M-ivxCF3JtNr3_HS_3Ze9oKqzkGw7xVMEhafLJRTr-BV6wYqKpjl8DVcimio9a8rYNsB6fDeeE0SxuuKpmoq58TOr6sQ2TWR9xRGEu-Dk4JCMNEWqBSak90THPDmSLy8Nun9NumbXCLgDP2iHXZWj"/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-20 lg:py-32 px-6">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+<div class="mx-auto max-w-5xl text-center">
+<div class="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-xs font-bold uppercase tracking-widest text-primary">
+                        Available for new projects
+                    </div>
+<h1 class="text-5xl font-black leading-[1.1] tracking-tight sm:text-7xl lg:text-8xl">
+                        Premium Digital <span class="text-primary">Experiences</span>
+</h1>
+<p class="mx-auto mt-8 max-w-2xl text-lg text-slate-500 dark:text-slate-400 sm:text-xl">
+                        Elite Performance &amp; High-Impact Design for Modern Brands. We transform complex visions into seamless, high-converting digital realities.
+                    </p>
+<div class="mt-12 flex flex-wrap justify-center gap-4">
+<button class="h-14 rounded-lg bg-primary px-10 text-lg font-bold text-white shadow-xl shadow-primary/20 transition-all hover:-translate-y-1 hover:shadow-primary/30 active:translate-y-0">
+                            View My Work
+                        </button>
+<button class="h-14 rounded-lg border border-border-dark bg-white/5 px-10 text-lg font-bold backdrop-blur-sm transition-all hover:bg-white/10">
+                            Services
+                        </button>
+</div>
+</div>
+</section>
+<!-- Filtering Section -->
+<section class="mx-auto max-w-7xl px-6 py-12 lg:px-10">
+<div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+<h3 class="text-2xl font-bold tracking-tight">Selected Projects</h3>
+<div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0">
+<button class="flex h-10 items-center justify-center rounded-full bg-primary px-6 text-sm font-bold text-white">All</button>
+<button class="flex h-10 items-center justify-center rounded-full border border-border-dark px-6 text-sm font-medium hover:border-primary/50 transition-colors">Web</button>
+<button class="flex h-10 items-center justify-center rounded-full border border-border-dark px-6 text-sm font-medium hover:border-primary/50 transition-colors">UI/UX</button>
+<button class="flex h-10 items-center justify-center rounded-full border border-border-dark px-6 text-sm font-medium hover:border-primary/50 transition-colors">Design</button>
+</div>
+</div>
+<!-- Projects Grid -->
+<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<!-- Project Card: Hotel 360 -->
+<div class="project-card group flex flex-col overflow-hidden rounded-xl bg-surface-dark border border-border-dark">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Hotel 360" class="project-image h-full w-full object-cover transition-transform duration-700" data-alt="Modern luxury hotel lobby with minimalist design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Fcrztpi9QDWEqH71X_du8Yf_26yQ4lGqlfzOC_rMPLSgySn2eBJZOwRvwRvMc2hoKxi75T7L64fWvVSvNDlK9uDMVh__IJ1u1iTX2xuUnBGvQyHuwQO0Eh6VI4GCbEBsfbYVYCYw21eG5NOty5jizECLKhcmF6jvYg9q6RkydItkyLDt3KKMj_6hfy5JkPZiu-eBwIFZ99cmcscmw85f4jxUT1uDEZwURPiMzVPPiH9fTzlSmFYFyWpi-JhoQoSqlzvk97mTZRmM"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<button class="view-button translate-y-4 rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-all duration-300">View Project</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex gap-2 mb-4">
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Web</span>
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Booking</span>
+</div>
+<h4 class="text-xl font-bold">Hotel 360</h4>
+<p class="mt-2 text-sm text-slate-400 line-clamp-2">A high-performance booking platform for boutique hotels worldwide.</p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<div class="flex gap-1 text-[11px] font-medium text-slate-500 uppercase">
+<span>React</span> • <span>Next.js</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card: Africentric Technology Hub -->
+<div class="project-card group flex flex-col overflow-hidden rounded-xl bg-surface-dark border border-border-dark">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Africentric Technology Hub" class="project-image h-full w-full object-cover transition-transform duration-700" data-alt="Close up of a futuristic microchip lighting up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZeiuv9tn4vEPoT06ktSWz-wDS0axj5NVNQi9pal8h3EAh1P9_buBq6ULkpRvXM9wobX3ZOgTpxMhhITND0uQ8EtFbl8i2081mLffZm1ViGmZQFNl-eBZsGD1gH-hb62ZkXh5kmOHCq9frNPHiXsaMPHpXHi2fbvGBJNBxLcYhCBY9KjZptv_vCAvwruKP1-ipbFmX3akFRGjbI0h9eihemF2q-1yX17eJUpnxlkD6fRNMJ2Ra6XqS-72GpjXuJ_WRgzaINDLPUvCf"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<button class="view-button translate-y-4 rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-all duration-300">View Project</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex gap-2 mb-4">
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Ecosystem</span>
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Full Stack</span>
+</div>
+<h4 class="text-xl font-bold">Africentric Tech Hub</h4>
+<p class="mt-2 text-sm text-slate-400 line-clamp-2">Digital home for Africa's leading technology ecosystem and startup incubator.</p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<div class="flex gap-1 text-[11px] font-medium text-slate-500 uppercase">
+<span>TypeScript</span> • <span>Tailwind</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card: Africentric Professional Services -->
+<div class="project-card group flex flex-col overflow-hidden rounded-xl bg-surface-dark border border-border-dark">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Africentric Professional Services" class="project-image h-full w-full object-cover transition-transform duration-700" data-alt="Clean minimal office space with large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJMBHe41iRTCI2g2v74uFg4xeG7qib8ibYqus5XrsXqi2msV3LI7OD3M05T1iiXfD3LLbSOLZLAHgauHSiqOYQ9E_JxTSsAdkPseANPip1B4dVl0CyJcJFglIvddtuEFQAOaaGmddcxh7FXgMMBSnOw6Pg0RFYBbNoeXsx7j7_DYp6Ln7n1d-Icw-NZxDxyUydaomu8RhTePV3HSo-HlZWMjtq7cDbo2wDCZs5Lq9z77mHDzsRa0W6Kzlba23ngo-j0lXCJAldMGtw"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<button class="view-button translate-y-4 rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-all duration-300">View Project</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex gap-2 mb-4">
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Corporate</span>
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Identity</span>
+</div>
+<h4 class="text-xl font-bold">Africentric Services</h4>
+<p class="mt-2 text-sm text-slate-400 line-clamp-2">Elite corporate portal for professional consulting and advisory services.</p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<div class="flex gap-1 text-[11px] font-medium text-slate-500 uppercase">
+<span>Brand</span> • <span>Web Design</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card: Griom Entertainment -->
+<div class="project-card group flex flex-col overflow-hidden rounded-xl bg-surface-dark border border-border-dark">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Griom Entertainment" class="project-image h-full w-full object-cover transition-transform duration-700" data-alt="DJ playing at a nightclub with red laser lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaGG0MVsjrVWgJjBGoM9B_b3CPSxxkN2wyziGGim4fM2zMwbH3ywdbtvgJiapOIJj06IrfBHP5lvJkIX1Emxv0Q8qfyqogUkQnRBaDCnU4bgaXL6LUpaQVTiJ2WhvW-Ak4JwLhi8WRu5-JOy9w6OVqVIIA8YM1U9P5LjC2igS_24hMf0YmxsAzeJSI7xevBaz1xLZZBQrRK6zLu8maA6M3zaByabM7FemMqwLyU91DMlNyT6gm85nR9gUqiagftVFo-5tZBLf0S2zO"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<button class="view-button translate-y-4 rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-all duration-300">View Project</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex gap-2 mb-4">
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Media</span>
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">UI/UX</span>
+</div>
+<h4 class="text-xl font-bold">Griom Entertainment</h4>
+<p class="mt-2 text-sm text-slate-400 line-clamp-2">An immersive media portal for Africa's burgeoning entertainment industry.</p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<div class="flex gap-1 text-[11px] font-medium text-slate-500 uppercase">
+<span>Motion</span> • <span>Interactive</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card: Verified Homes Insight -->
+<div class="project-card group flex flex-col overflow-hidden rounded-xl bg-surface-dark border border-border-dark">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Verified Homes Insight" class="project-image h-full w-full object-cover transition-transform duration-700" data-alt="Abstract blueprint and building models for real estate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAdesHLNEYKSh4vnpkh7_ZBpsxG_QxRRxGC75GZGN-9_8EMnujlmDT612bFSynfPxyLJZwyqF-wHDoNw0pl74HUQjTH5YxOxhdUdmfs3ZXEh6PGWHiPw4W1Wwge-rumhMsTRm28dws5jx0kqUAVzFJmm18aAkH4c06cEP0tfCFKOEwM8o2ZTn4hWHNybourSQF_qQ1YdmAwTaCBBcGc1bs17NqWuqzzN_6btF2t35cPyfAukmSfazhQ9-qEqIpG08OHgMWDSVt7fEa"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<button class="view-button translate-y-4 rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-all duration-300">View Project</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex gap-2 mb-4">
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Real Estate</span>
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Analytics</span>
+</div>
+<h4 class="text-xl font-bold">Verified Homes</h4>
+<p class="mt-2 text-sm text-slate-400 line-clamp-2">Data-driven insights and verified listings for the high-end property market.</p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<div class="flex gap-1 text-[11px] font-medium text-slate-500 uppercase">
+<span>Product</span> • <span>Figma</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project Card: Kwik Change -->
+<div class="project-card group flex flex-col overflow-hidden rounded-xl bg-surface-dark border border-border-dark">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Kwik Change" class="project-image h-full w-full object-cover transition-transform duration-700" data-alt="Detailed close up of a luxury car engine parts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgaiu0QuCbtT3DypW1iSnWzxGAm_KpkxfhBnHW7A1s1FK3QSOTaUEVi2zGjr7i-gO_bOVcyZKyz3-Vaf21qzRZs4-5-oz7AfBgCeYCQk_MAyinLtD6ojVQo2zWNKt_illkDXjiY-7QU6iOcG8mXdeDjnX4om71hKqNQJe0RlGV3mXEbEz6oT7EZRowFyNvET9c4lf61WjLZa1USYuIye04rmcfMMW3hxVYYl2nsVcHCeEOXbMnXwIpgX_61o1Wq_5CvnegjppKcc3M"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+<button class="view-button translate-y-4 rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white transition-all duration-300">View Project</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex gap-2 mb-4">
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Automotive</span>
+<span class="rounded bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Mobile</span>
+</div>
+<h4 class="text-xl font-bold">Kwik Change</h4>
+<p class="mt-2 text-sm text-slate-400 line-clamp-2">On-demand automotive maintenance app for busy modern professionals.</p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<div class="flex gap-1 text-[11px] font-medium text-slate-500 uppercase">
+<span>Flutter</span> • <span>Firebase</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<div class="flex flex-col gap-2 rounded-xl border border-border-dark bg-surface-dark p-8">
+<p class="text-sm font-medium text-slate-400 uppercase tracking-widest">Projects Completed</p>
+<p class="text-4xl font-black text-primary">50+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-dark bg-surface-dark p-8">
+<p class="text-sm font-medium text-slate-400 uppercase tracking-widest">Client Satisfaction</p>
+<p class="text-4xl font-black text-primary">100%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-dark bg-surface-dark p-8">
+<p class="text-sm font-medium text-slate-400 uppercase tracking-widest">Years Experience</p>
+<p class="text-4xl font-black text-primary">8+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-border-dark bg-surface-dark p-8">
+<p class="text-sm font-medium text-slate-400 uppercase tracking-widest">Global Awards</p>
+<p class="text-4xl font-black text-primary">12</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+<div class="relative overflow-hidden rounded-3xl bg-primary px-8 py-20 text-center text-white lg:py-32">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+<h2 class="relative text-4xl font-black tracking-tight sm:text-6xl">Ready to elevate your <br/> digital presence?</h2>
+<p class="relative mt-8 text-lg font-medium opacity-90">Let's build something exceptional together.</p>
+<button class="relative mt-12 inline-flex h-16 items-center justify-center rounded-xl bg-white px-12 text-lg font-bold text-primary transition-all hover:scale-105 active:scale-95">
+                        Start a Project
+                    </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-border-dark py-12 px-6">
+<div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined !text-xl">diamond</span>
+</div>
+<h2 class="text-lg font-bold tracking-tighter uppercase italic">Sierra</h2>
+</div>
+<div class="flex gap-8">
+<a class="text-sm text-slate-500 hover:text-white transition-colors" href="#">Twitter</a>
+<a class="text-sm text-slate-500 hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="text-sm text-slate-500 hover:text-white transition-colors" href="#">Behance</a>
+<a class="text-sm text-slate-500 hover:text-white transition-colors" href="#">Dribbble</a>
+</div>
+<p class="text-sm text-slate-500">© 2024 Sierra Studio. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>
