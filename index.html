@@ -64,6 +64,7 @@
         .gradient-text {
             background: linear-gradient(135deg, #fff 0%, #e31c29 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar {
@@ -79,6 +80,28 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: rgba(227, 28, 41, 0.5);
         }
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+            will-change: transform, opacity;
+        }
+        
+        .reveal-up { transform: translateY(40px); }
+        .reveal-down { transform: translateY(-40px); }
+        .reveal-left { transform: translateX(40px); }
+        .reveal-right { transform: translateX(-40px); }
+        .reveal-scale { transform: scale(0.95); opacity: 0; }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300 selection:bg-primary selection:text-white">
@@ -113,7 +136,7 @@
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-20 hero-mesh overflow-hidden" id="home">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
-            <div class="relative z-10">
+            <div class="relative z-10 reveal reveal-right">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -137,7 +160,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative hidden lg:block">
+            <div class="relative hidden lg:block reveal reveal-left">
                 <div class="relative w-full aspect-square max-w-xl mx-auto rounded-2xl overflow-hidden shadow-2xl group border border-primary/20">
                     <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 pointer-events-none"></div>
                     <img alt="Professional portrait of Michael Ibangha" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD2uN2R9dmMk4RKyNXc-UkrCdI8coxkRcS--Uw9eXl2AOs-qWwRSFDWG-35IyMpv-nMnVUxYqiZMM6vT87CqvVnUQFIJMtvQ_Qw-zJfgfy1ZqniaNnAkLA8iNU7XYpvwVx1kqrKGWwLIp7BNd1-wH0Rcuh3Xrh35SNtfCj63biCgmgsa7yJyGmCNpI1FLKa41TnGDHcjv9wa6zCiAKiUwZ_q_DuTnFMNHRdDxioc-23N4DpuWcrKibF95vRKYLX1BduSWoyHL-1GCV"/>
@@ -162,17 +185,17 @@
     <!-- About Section -->
     <section class="max-w-7xl mx-auto px-6 py-24 md:py-32" id="about">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
-            <div class="lg:col-span-5 relative group">
+            <div class="lg:col-span-5 relative group reveal reveal-right">
                 <div class="absolute -inset-1 bg-gradient-to-r from-primary to-orange-600 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                 <div class="relative aspect-[4/5] bg-surface-dark rounded-xl overflow-hidden border border-border-dark">
                     <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgTpH-CTZib2MoCQtB00GQ40idxFRNDq9tmbDs8DMN_Gfu5xdHwdFELswuB-MUus_pDD3g2srwES2fInOVrC2s7iusYFdl5L6TXD_zHUECKgi_LdJSsGHC6biGgaqBRlQl4-SAX4GAyH9G4ur0U60hpRl9PClgIMwA3v4spHrnvshYXdH4uoU1sQ09kCdsOsyUCzfGfm7FFv3_WsZ3z02nM8tvj3Y6Hww_K42BYLJngPHnQUMycp3VvbZlfvLim9nVUbhF9Bw-7TUW"/>
                 </div>
-                <div class="absolute bottom-6 -right-6 bg-primary p-6 rounded-lg shadow-2xl hidden md:block">
+                <div class="absolute bottom-6 -right-6 bg-primary p-6 rounded-lg shadow-2xl hidden md:block reveal reveal-up stagger-2">
                     <p class="text-white text-xs uppercase tracking-widest font-bold mb-1">Impact Driven</p>
                     <p class="text-white font-bold text-lg">CTO, Africentric</p>
                 </div>
             </div>
-            <div class="lg:col-span-7 flex flex-col justify-center">
+            <div class="lg:col-span-7 flex flex-col justify-center reveal reveal-left">
                 <span class="text-primary font-bold tracking-widest text-sm uppercase mb-4 block">Executive Profile</span>
                 <h2 class="text-4xl md:text-6xl font-black leading-[1.1] mb-8 tracking-tight dark:text-white">
                     Architecting the Future of <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">African Tech.</span>
@@ -192,19 +215,19 @@
             </div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-16 border-y border-border-dark">
-            <div class="text-center">
+            <div class="text-center reveal reveal-up stagger-1">
                 <h3 class="text-4xl md:text-5xl font-black text-primary mb-2">12+</h3>
                 <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">Years Experience</p>
             </div>
-            <div class="text-center border-l border-white/10">
+            <div class="text-center border-l border-white/10 reveal reveal-up stagger-2">
                 <h3 class="text-4xl md:text-5xl font-black text-white mb-2">150+</h3>
                 <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">Projects Delivered</p>
             </div>
-            <div class="text-center border-l border-white/10">
+            <div class="text-center border-l border-white/10 reveal reveal-up stagger-3">
                 <h3 class="text-4xl md:text-5xl font-black text-white mb-2">40+</h3>
                 <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">Global Clients</p>
             </div>
-            <div class="text-center border-l border-white/10">
+            <div class="text-center border-l border-white/10 reveal reveal-up stagger-4">
                 <h3 class="text-4xl md:text-5xl font-black text-white mb-2">12</h3>
                 <p class="text-slate-500 text-sm font-medium uppercase tracking-widest">Award Nominations</p>
             </div>
@@ -225,7 +248,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="group p-10 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark hover:border-primary/50 transition-all hover:translate-y-[-8px]">
+                <div class="group p-10 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark hover:border-primary/50 transition-all hover:translate-y-[-8px] reveal reveal-up stagger-1">
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
                         <span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">code</span>
                     </div>
@@ -238,7 +261,7 @@
                     </div>
                 </div>
                 <!-- Service 2 -->
-                <div class="group p-10 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark hover:border-primary/50 transition-all hover:translate-y-[-8px]">
+                <div class="group p-10 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark hover:border-primary/50 transition-all hover:translate-y-[-8px] reveal reveal-up stagger-2">
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
                         <span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">design_services</span>
                     </div>
@@ -251,7 +274,7 @@
                     </div>
                 </div>
                 <!-- Service 3 -->
-                <div class="group p-10 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark hover:border-primary/50 transition-all hover:translate-y-[-8px]">
+                <div class="group p-10 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark hover:border-primary/50 transition-all hover:translate-y-[-8px] reveal reveal-up stagger-3">
                     <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
                         <span class="material-symbols-outlined text-primary group-hover:text-white text-3xl transition-colors">branding_watermark</span>
                     </div>
@@ -278,7 +301,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Project 1 -->
-                <div class="project-card group relative rounded-2xl overflow-hidden bg-surface-dark aspect-[4/3] border border-border-dark">
+                <div class="project-card group relative rounded-2xl overflow-hidden bg-surface-dark aspect-[4/3] border border-border-dark reveal reveal-scale stagger-1">
                     <img class="project-image w-full h-full object-cover transition-transform duration-500 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Fcrztpi9QDWEqH71X_du8Yf_26yQ4lGqlfzOC_rMPLSgySn2eBJZOwRvwRvMc2hoKxi75T7L64fWvVSvNDlK9uDMVh__IJ1u1iTX2xuUnBGvQyHuwQO0Eh6VI4GCbEBsfbYVYCYw21eG5NOty5jizECLKhcmF6jvYg9q6RkydItkyLDt3KKMj_6hfy5JkPZiu-eBwIFZ99cmcscmw85f4jxUT1uDEZwURPiMzVPPiH9fTzlSmFYFyWpi-JhoQoSqlzvk97mTZRmM"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform">
                         <p class="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-2">Web Application</p>
@@ -289,7 +312,7 @@
                     </div>
                 </div>
                 <!-- Project 2 -->
-                <div class="project-card group relative rounded-2xl overflow-hidden bg-surface-dark aspect-[4/3] border border-border-dark">
+                <div class="project-card group relative rounded-2xl overflow-hidden bg-surface-dark aspect-[4/3] border border-border-dark reveal reveal-scale stagger-2">
                     <img class="project-image w-full h-full object-cover transition-transform duration-500 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZeiuv9tn4vEPoT06ktSWz-wDS0axj5NVNQi9pal8h3EAh1P9_buBq6ULkpRvXM9wobX3ZOgTpxMhhITND0uQ8EtFbl8i2081mLffZm1ViGmZQFNl-eBZsGD1gH-hb62ZkXh5kmOHCq9frNPHiXsaMPHpXHi2fbvGBJNBxLcYhCBY9KjZptv_vCAvwruKP1-ipbFmX3akFRGjbI0h9eihemF2q-1yX17eJUpnxlkD6fRNMJ2Ra6XqS-72GpjXuJ_WRgzaINDLPUvCf"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform">
                         <p class="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-2">Infrastructure</p>
@@ -300,7 +323,7 @@
                     </div>
                 </div>
                 <!-- Project 3 -->
-                <div class="project-card group relative rounded-2xl overflow-hidden bg-surface-dark aspect-[4/3] border border-border-dark">
+                <div class="project-card group relative rounded-2xl overflow-hidden bg-surface-dark aspect-[4/3] border border-border-dark reveal reveal-scale stagger-3">
                     <img class="project-image w-full h-full object-cover transition-transform duration-500 opacity-60 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaGG0MVsjrVWgJjBGoM9B_b3CPSxxkN2wyziGGim4fM2zMwbH3ywdbtvgJiapOIJj06IrfBHP5lvJkIX1Emxv0Q8qfyqogUkQnRBaDCnU4bgaXL6LUpaQVTiJ2WhvW-Ak4JwLhi8WRu5-JOy9w6OVqVIIA8YM1U9P5LjC2igS_24hMf0YmxsAzeJSI7xevBaz1xLZZBQrRK6zLu8maA6M3zaByabM7FemMqwLyU91DMlNyT6gm85nR9gUqiagftVFo-5tZBLf0S2zO"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform">
                         <p class="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-2">Media & UI/UX</p>
@@ -323,7 +346,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Quote 1 -->
-                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark flex flex-col hover:border-primary/40 transition-colors">
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark flex flex-col hover:border-primary/40 transition-colors reveal reveal-up stagger-1">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6">format_quote</span>
                     <p class="text-slate-600 dark:text-slate-400 italic mb-8 flex-grow">
                         "Michael's ability to translate complex business requirements into high-performing technical architecture is unmatched. He truly understands both the 'why' and the 'how'."
@@ -339,7 +362,7 @@
                     </div>
                 </div>
                 <!-- Quote 2 -->
-                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark flex flex-col hover:border-primary/40 transition-colors">
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark flex flex-col hover:border-primary/40 transition-colors reveal reveal-up stagger-2">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6">format_quote</span>
                     <p class="text-slate-600 dark:text-slate-400 italic mb-8 flex-grow">
                         "The design aesthetic Sierra brought to our platform completely changed our user engagement. A rare talent who bridges design and engineering perfectly."
@@ -355,7 +378,7 @@
                     </div>
                 </div>
                 <!-- Quote 3 -->
-                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark flex flex-col hover:border-primary/40 transition-colors">
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-background-dark border border-slate-100 dark:border-border-dark flex flex-col hover:border-primary/40 transition-colors reveal reveal-up stagger-3">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6">format_quote</span>
                     <p class="text-slate-600 dark:text-slate-400 italic mb-8 flex-grow">
                         "Working with Michael as our CTO consultant was a game changer for our tech stack. He doesn't just build, he builds with the future in mind."
@@ -384,8 +407,8 @@
                 Let's engineer your next digital breakthrough.
             </p>
         </div>
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm shadow-2xl">
-            <div class="lg:col-span-4 p-8 border-b lg:border-b-0 lg:border-r border-white/10 bg-gradient-to-br from-white/[0.02] to-transparent">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm shadow-2xl reveal reveal-scale">
+            <div class="lg:col-span-4 p-8 border-b lg:border-b-0 lg:border-r border-white/10 bg-gradient-to-br from-white/[0.02] to-transparent reveal reveal-right stagger-2">
                 <div class="flex flex-col h-full">
                     <div class="mb-8">
                         <div class="w-20 h-20 rounded-2xl overflow-hidden mb-4 border-2 border-primary/30">
@@ -426,7 +449,7 @@
     <!-- Contact Section -->
     <section class="max-w-7xl mx-auto px-6 py-24" id="contact">
         <div class="grid lg:grid-cols-2 gap-16">
-            <div class="glass-panel rounded-2xl p-8 md:p-12 shadow-2xl">
+            <div class="glass-panel rounded-2xl p-8 md:p-12 shadow-2xl reveal reveal-right">
                 <h3 class="text-3xl font-black mb-8 text-white">Let's build the <span class="text-primary">future.</span></h3>
                 <form class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
@@ -437,7 +460,7 @@
                     <button class="w-full bg-primary hover:bg-primary/90 text-white font-black py-5 rounded-lg uppercase tracking-widest transition-all">Send Proposal</button>
                 </form>
             </div>
-            <div class="flex flex-col justify-between py-4">
+            <div class="flex flex-col justify-between py-4 reveal reveal-left">
                 <div class="space-y-8">
                     <a class="group flex items-center gap-6 p-6 rounded-2xl bg-surface-dark border border-border-dark hover:border-primary/50 transition-all" href="mailto:hello@sierra.com">
                         <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
@@ -448,7 +471,7 @@
                             <p class="text-xl font-bold dark:text-white">hello@michaelibangha.com</p>
                         </div>
                     </a>
-                    <div class="p-8 rounded-2xl bg-primary relative overflow-hidden">
+                    <div class="p-8 rounded-2xl bg-primary relative overflow-hidden reveal reveal-up stagger-2">
                         <h4 class="text-xl font-black mb-2 text-white uppercase italic">Fast Response</h4>
                         <p class="text-white/80 text-sm">Typical response time: 2-4 hours.</p>
                     </div>
@@ -484,5 +507,25 @@
     </div>
 </a>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: unobserve after showing
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
